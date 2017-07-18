@@ -4,18 +4,20 @@ The code samples are composed from:
 
 ## CodeSamples 1
 
-CodeSamples 1 contains solutions for the N-Body problem in 4 different ways:
+CodeSamples 1 contains solutions for the N-Body problem in 4 different flavours:
 
 1. Cuda straight forward implementation
-  -  Spawning of a thread for every body in the system
-2. Cuda implementation that decreases computations from O(N^2) to O(N^2/2)
+  -  Spawning of a cuda thread for every body in the system
+2. Cuda implementation that decreases computations from `O(N^2)` to `O(N^2/2)`
   -  Through sharing of computations and a further step for gathering of results
 3. C++ threads implementation making use of a producer and multiple consumers.
   - The producer contains a list of tasks
   - The consumers will continue to consume tasks until signalled
-4. OpenMP implementation that makes use of the SSE3 instruction set to improve the performance
+  - Producer and Consumers operate in a lock-step fashion
+4. OpenMP implementation
+  - Makes use of the SSE3 instruction set for improved performance
 
-##CodeSample 2
+## CodeSample 2
 
 
 <!-- ## Welcome to GitHub Pages
