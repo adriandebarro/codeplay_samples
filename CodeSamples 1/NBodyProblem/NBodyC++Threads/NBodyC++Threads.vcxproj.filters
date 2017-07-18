@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="InputFiles">
+      <UniqueIdentifier>{35de216f-870c-4a6d-a3da-0c4fc1e93cc7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\TaskConsumer">
+      <UniqueIdentifier>{5bb5f141-3668-4a5b-a64e-5d23cc76b173}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Application">
+      <UniqueIdentifier>{27d1d888-e32f-49d3-b665-68be4adf6455}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\ThreadApplication.cpp">
+      <Filter>Header Files\Application</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="InputFiles\input_64.txt">
+      <Filter>InputFiles</Filter>
+    </Text>
+    <Text Include="InputFiles\input_1024.txt">
+      <Filter>InputFiles</Filter>
+    </Text>
+    <Text Include="InputFiles\input_4096.txt">
+      <Filter>InputFiles</Filter>
+    </Text>
+    <Text Include="InputFiles\input_16384.txt">
+      <Filter>InputFiles</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="TaskConsumer\TrivialTaskConsumer.h">
+      <Filter>Header Files\TaskConsumer</Filter>
+    </ClInclude>
+    <ClInclude Include="Application\ThreadApplication.h">
+      <Filter>Header Files\Application</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

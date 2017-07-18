@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CudaCompile Include="kernel.cu" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="InputFiles">
+      <UniqueIdentifier>{d7563c7f-bff6-4a11-99d9-b3426fc325a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application">
+      <UniqueIdentifier>{2392572e-acf6-4a92-9f9c-c07ce5b870cb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="InputFiles\input_64.txt">
+      <Filter>InputFiles</Filter>
+    </Text>
+    <Text Include="InputFiles\input_1024.txt">
+      <Filter>InputFiles</Filter>
+    </Text>
+    <Text Include="InputFiles\input_4096.txt">
+      <Filter>InputFiles</Filter>
+    </Text>
+    <Text Include="InputFiles\input_16384.txt">
+      <Filter>InputFiles</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Application\CudaApplication-n2.h">
+      <Filter>Application</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Application\CudaApplication-n2.cpp">
+      <Filter>Application</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
