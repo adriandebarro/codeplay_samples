@@ -1,0 +1,6 @@
+#Sponza Checkpoints
+#author: Adrian De Barro	
+p 937 625 66
+p 535 625 66
+p -5 625 66
+PA 1,2,3

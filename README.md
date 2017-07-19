@@ -23,16 +23,20 @@ Code sample 2 contains the work of my Master's thesis, which involves the field 
 
 
 
-![alt text](GithubPagesAssits/system_overview.png)
+![alt text](GithubPagesAssits/system_overview.PNG)
 
 
 
 The code can be split into two; the rendering component and the communication component, as specified in the
 
+### Improving Sample 2
+
+
+
 ### A copy of my dissertation can be acquired from [here](./GithubPagesAssits/main.pdf)
 
 ## Compiling the Sources
-To compile all the sources an environmental variable must be setup, specifying a directory containing the Boost Library
+To compile all the sources an environmental variable `BOOST_DIR` must be setup, specifying a directory containing a Boost Library
 
 ## Feedback
 Any feedback on how to improve the code further would be greatly appreciated.

@@ -1,0 +1,26 @@
+{
+	"weight_params":
+	{
+		"locality_weight" :0.2,
+		"bounds_weight" : 0.2,
+		"latency_weight" : 0.2,
+		"viewpoint_weight" : 0.2,
+		"frame_rate_weight" : 0.2 
+	},
+
+	"broadcast_params":
+	{
+		"locality_broadcast_period" : 10,
+		"bounds_broadcast_period" : 10,
+		"latency_broadcast_period" : 10,
+		"view_point_period" : 10,
+		"frame_rate_period" : 10
+	},
+
+	"context_update": 10,
+	"peer_update": 5,
+	"initializer_period": 8,
+	"context_subscribers_limit": 8,
+	"enabled_contexts": "0,0,0,0,1"
+}
+

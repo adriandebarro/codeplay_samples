@@ -1,0 +1,211 @@
+# ql_concrete04
+newmtl material_0
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd innersanctum_material_0.ppm
+
+# ql_concrete04rf
+newmtl material_1
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd innersanctum_material_1.ppm
+
+# ql_redtrim02
+newmtl material_2
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd innersanctum_material_2.ppm
+
+# ql_techtrim02_n
+newmtl material_3
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd innersanctum_material_3.ppm
+
+# ql_panel04red
+newmtl material_4
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd innersanctum_material_4.ppm
+
+newmtl material_5
+Kd 1.0000 1.0000 1.0000
+illum 0
+
+# ql_concrete_red
+newmtl material_6
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd innersanctum_material_6.ppm
+
+# ql_concrete04dv
+newmtl material_7
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd innersanctum_material_7.ppm
+
+# ql_concrete04ed
+newmtl material_8
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd innersanctum_material_8.ppm
+
+# ql_concrete
+newmtl material_9
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd innersanctum_material_9.ppm
+
+# ql_xian_dm3padw
+newmtl material_10
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd innersanctum_material_10.ppm
+
+# ql_heat_tile02
+newmtl material_11
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd innersanctum_material_11.ppm
+
+# ql_jumppad_tile
+newmtl material_12
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd innersanctum_material_12.ppm
+
+# ql_gothic_light
+newmtl material_13
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd innersanctum_material_13.ppm
+
+# ql_metwall
+newmtl material_14
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd innersanctum_material_14.ppm
+
+# ql_launchpad03
+newmtl material_15
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd innersanctum_material_15.ppm
+
+# ql_concrete_blu
+newmtl material_16
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd innersanctum_material_16.ppm
+
+# ql_jumppad_con
+newmtl material_17
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd innersanctum_material_17.ppm
+
+# ql_metwall02
+newmtl material_18
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd innersanctum_material_18.ppm
+
+# ql_crackcrete
+newmtl material_19
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd innersanctum_material_19.ppm
+
+# ql_lava
+newmtl material_20
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd innersanctum_material_20.ppm
+
+# ql_bluetrim02
+newmtl material_21
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd innersanctum_material_21.ppm
+
+# ql_panel04blue
+newmtl material_22
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd innersanctum_material_22.ppm
+
+# {ql_grill02
+newmtl material_23
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd innersanctum_material_23.ppm
+
+# {ql_blue_banner
+newmtl material_24
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd innersanctum_material_24.ppm
+
+# ql_light
+newmtl material_25
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd innersanctum_material_25.ppm
+
+# {ql_v_support02
+newmtl material_26
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd innersanctum_material_26.ppm
+
+# {ql_red_banner0
+newmtl material_27
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd innersanctum_material_27.ppm
+
+# ql_light_nv
+newmtl material_28
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd innersanctum_material_28.ppm
+
+# ql_bigchain
+newmtl material_29
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd innersanctum_material_29.ppm
+
+# {ql_red_dcl
+newmtl material_30
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd innersanctum_material_30.ppm
+
+# {ql_bluea_dcl
+newmtl material_31
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd innersanctum_material_31.ppm
+
+# {ql_bluearrows
+newmtl material_32
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd innersanctum_material_32.ppm
+
+# {ql_redarrows
+newmtl material_33
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd innersanctum_material_33.ppm
+
+# ql_concrete04st
+newmtl material_34
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd innersanctum_material_34.ppm
+
+
+newmtl end
+

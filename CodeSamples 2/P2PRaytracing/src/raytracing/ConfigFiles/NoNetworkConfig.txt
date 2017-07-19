@@ -1,0 +1,7 @@
+pathNumber=2 
+intervalForBenchmark=0.2 
+peerName=tester
+sceneType=9 
+windowSize=600 
+mt=8
+useNetwork=0

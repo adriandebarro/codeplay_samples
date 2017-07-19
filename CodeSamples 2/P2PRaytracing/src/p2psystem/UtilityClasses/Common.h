@@ -1,0 +1,41 @@
+#pragma once 
+#include <iostream>
+
+
+namespace Network
+{
+	
+	#define MAXIMUM_AMOUNT_NEIGHBORS_GATE_KEEPER 30
+	#define MAXIMUM_AMOUNT_CONNECTIONS_PEER 10
+	#define MAXIMUM_AMOUNT_NEIGHBORS 10
+
+	#define GATEKEEPER_LISTENING_PORT 20000
+	#define LISTENING_PORT 20012
+	#define ORACLE_PEER_UPDATER 15000
+
+	#define MAX_AMOUNT_PEER_TO_SEND 5
+	#define UPDATE_THREAD_SLEEP_MILLI 500
+	#define VECTOR_TIMER_LENGTH 10
+	#define FIXED_AMOUNT_PEERS 5
+
+	#define  MAX_AMOUNT_OBSERVABLE_ELEMENTS 20
+	#define MAX_AMOUNT_PER_EVENT  100
+	#define DELTAGAP_EPOCH  50000
+
+	#define SUPER_PEER_BASE_PORT 20200
+	#define SUPER_PEER_TERMINATE_MESSAGE 3
+	#define SUPER_PEER_HANDSHAKE_MESSAGE 1
+	#define SUPER_PEER_UPDATE_MESSAGE 2
+
+	#define SUPER_PEER_COMMUNNICATION_TO_PEER 20700
+	
+	// For Debugging contexts REMOVE DEFINITION
+	//#define TO_DEBUG_CONTEXTS
+	
+	inline static void DebugCout(std::string p_toPrint)
+	{
+		#ifdef TO_DEBUG_CONTEXTS
+					std::cout << p_toPrint << std::endl;
+		#endif
+	}
+}

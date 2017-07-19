@@ -4,8 +4,6 @@
 #builds 
 #input_*.txt
 
-CodeSamples_2/
-
 # User-specific files
 *.suo
 *.user

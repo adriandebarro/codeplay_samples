@@ -1,0 +1,1 @@
+start RayTracer.exe --gateKeeper=0

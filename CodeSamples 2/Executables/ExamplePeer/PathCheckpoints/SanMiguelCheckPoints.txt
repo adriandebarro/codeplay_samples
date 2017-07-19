@@ -1,0 +1,6 @@
+#San Miguel Checkpoints
+#author: Adrian De Barro	
+p 19.30 9.72 8.08
+p 15.84 9.72 8.08
+p 8.69 9.72 8.08
+PA 1,2,3

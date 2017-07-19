@@ -1,0 +1,1 @@
+.\p2p_rendering\x64\Release\RayTracer.exe --gateKeeper=0

@@ -1,0 +1,10 @@
+amountPeers=5 
+peerIndex=4 
+gatekeeperIp="10.60.10.205" 
+pathNumber=1 
+intervalForBenchmark=0.2 
+peerName="tester" 
+sceneType=9 
+windowSize=600 
+socketNumber=17
+mt=8

@@ -1,0 +1,152 @@
+{
+  "CameraRange":"0.5f",
+
+  "Light": [
+    {
+      "Name": "Light_1",
+      "Type": "PointLight",
+      "Position": "15,-3.31,63",
+      "Range":"30",
+      "Color":"1,1,1",
+      "Energy": "700",
+      "Status": "1"
+    },
+    {
+      "Name": "Light_2",
+      "Type": "PointLight",
+      "Position": "36,-4.5,45",
+      "Range":"30",
+      "Color":"1,1,1",
+      "Energy": "700",
+      "Status": "1"
+    },
+    {
+      "Name": "Light_3",
+      "Type": "PointLight",
+      "Position": "34,-4.62,-1",
+      "Range":"30",
+      "Color":"1,1,1",
+      "Energy": "700",
+      "Status": "1"
+    },
+    {
+      "Name": "Light_4",
+      "Type": "PointLight",
+      "Position": "1.73,4.47,17.17",
+      "Range":"30",
+      "Color":"1,1,1",
+      "Energy": "700",
+      "Status": "1"
+    },
+    {
+      "Name": "Light_5",
+      "Type": "PointLight",
+      "Position": "-25,4.47,-11.11",
+      "Range":"30",
+      "Color":"1,1,1",
+      "Energy": "700",
+      "Status": "1"
+    },
+    {
+      "Name": "Light_6",
+      "Type": "PointLight",
+      "Position": "7,4.5,-70",
+      "OldPosition" : "7,4.5,-53",
+      "Color":"1,1,1",
+      "Range":"30",
+      "Energy": "700",
+      "Status": "1"
+    },
+    {
+      "Name": "Light_7",
+      "Type": "PointLight",
+      "Position": "-10.5,4.5,-500",
+      "OldPosition": "-10.5,4.5,-94",
+      "Range":"30",
+      "Color":"1,1,1",
+      "Energy": "300",
+      "Status": "1"
+    },
+    {
+      "Name": "Light_8",
+      "Type": "PointLight",
+      "Position": "-48.5,5,-44",
+      "Color":"1,1,1",
+      "Range":"30",
+      "Energy": "700",
+      "Status": "1"
+    },
+    {
+      "Name": "Light_9",
+      "Type": "PointLight",
+      "Position": "-75.5,4.5,58.12",
+      "Range":"30",
+      "Color":"1,1,1",
+      "Energy": "700",
+      "Status": "1"
+    },
+    {
+      "Name": "Light_10",
+      "Type": "PointLight",
+      "Position": "-112,4.5,-33.68",
+      "Color":"1,1,1",
+      "Range":"30",
+      "Energy": "700",
+      "Status": "1"
+    },
+    {
+      "Name": "Light_11",
+      "Type": "PointLight",
+      "Position": "-85,4.5,-33.68",
+      "Color":"1,1,1",
+      "Range":"30",
+      "Energy": "700",
+      "Status": "1"
+    },
+    {
+      "Name": "Light_12",
+      "Type": "PointLight",
+      "Position": "52,-4,-4.5",
+      "Color":"1,1,1",
+      "Range":"30",
+      "Energy": "700",
+      "Status": "1"
+    },
+    {
+      "Name": "Light_13",
+      "Type": "PointLight",
+      "Position": "52,-10,65",
+      "Color":"1,1,1",
+      "Range":"30",
+      "Energy": "700",
+      "Status": "1"
+    },
+    {
+      "Name": "Light_14",
+      "Type": "DirectionalLight",
+      "Energy": "15",
+      "Color":"1,1,1",
+      "Direction":"1,-1,0"
+    }
+  ],
+
+  "Environment": 
+  {
+    "Light":[
+      { "Name": "Light_1" },
+      { "Name": "Light_2" },
+      { "Name": "Light_3" },
+      { "Name": "Light_4" },
+      { "Name": "Light_5" },
+      { "Name": "Light_6" },
+      { "Name": "Light_7" },
+      { "Name": "Light_8" },
+      { "Name": "Light_9" },
+      { "Name": "Light_10" },
+      { "Name": "Light_11" },
+      { "Name": "Light_12" },
+      { "Name": "Light_13" },
+      { "Name": "Light_14" }
+    ]
+  }
+}

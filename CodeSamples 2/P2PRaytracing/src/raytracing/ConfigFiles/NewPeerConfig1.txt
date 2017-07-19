@@ -1,0 +1,13 @@
+amountPeers=16
+peerIndex=1
+pathNumber=1
+peerName="tester" 
+sceneType=9 
+windowSize=600 
+socketNumber=12
+mt=8
+timeAfterCommAtempt=0.250
+timeSleepAfterFailedAttempt=0.500
+ipAddress=10.60.10.237
+useRandomPath=1
+pathConfigFile=PathCheckpoints/TownCheckPointsConfig.txt
