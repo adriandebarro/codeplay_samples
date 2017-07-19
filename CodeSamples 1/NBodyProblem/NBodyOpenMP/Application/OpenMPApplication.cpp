@@ -257,129 +257,17 @@ void NBody::Application::OpenMPApplication::Execute()
 	std::cout << "Total time taken is "<< timeTaken << std::endl;
 }
 
-///-------------------------------------------------------------------------------------------------
-/// <summary>	ComputeForces using AVX </summary>
-///
-/// <remarks>	Adrian, 18/07/2017. </remarks>
-///
-///-------------------------------------------------------------------------------------------------
-//void NBody::Application::OpenMPApplication::ComputeForces()
-//{
-//	bool firstTime = true;
-//#pragma omp parallel 
-//	for (int i = 0; i < m_bodyCount; i++)
-//	{
-//		a16_int *mask = new a16_int[m_bodyCount];
-//
-//		for (int index = 0; index < m_bodyCount; index += 5)
-//		{
-//			mask[index] = 0xFFFFFFFF;
-//			mask[index + 1] = 0xFFFFFFFF;
-//			mask[index + 2] = 0xFFFFFFFF;
-//			mask[index + 3] = 0xFFFFFFFF;
-//			mask[index + 4] = 0xFFFFFFFF;
-//		}
-//
-//		//set mask for body 
-//		mask[i] = 0;
-//		//resulting new positions
-//		__m256 xi = _mm256_setzero_ps();
-//		__m256 yi = _mm256_setzero_ps();
-//
-//		__m256 cxi = _mm256_set1_ps(m_xCoor[i]);
-//		__m256 cyi = _mm256_set1_ps(m_yCoor[i]);
-//
-//		__m256 sample = _mm256_load_ps(&m_xCoor[0]);
-//
-//		for (int j = 0; j < m_bodyCount; j += 8)
-//		{
-//			a16_int* maskPtr = &mask[j];
-//
-//			//issue here need to solve it, mask not working
-//			__m128i mask_0 = _mm_load_si128((__m128i*)(maskPtr));
-//			__m128i mask_1 = _mm_load_si128((__m128i*)(maskPtr + 4));
-//			//instruction not working correctly (leaving hi 128 bits = 0)
-//			//__m256i mask_10 = _mm256_set_m128i(mask_1, mask_0);
-//			__m256i mask_01 = _mm256_set1_epi32(0);
-//			//set the low bits equal to the actual mask value 
-//			mask_01 = _mm256_insertf128_si256(mask_01, mask_0, 0x00);
-//
-//			//set the hi bits maually (TEMPORARY solution)
-//			// TODO: FIX
-//			int* mask_01Ptr = ((int*)&mask_01);
-//			mask_01Ptr[4] = maskPtr[j + 4];
-//			mask_01Ptr[5] = maskPtr[j + 5];
-//			mask_01Ptr[6] = maskPtr[j + 6];
-//			mask_01Ptr[7] = maskPtr[j + 7];
-//
-//			//load positions at this point
-//			__m256 pX = _mm256_load_ps(&m_xCoor[j]);
-//			__m256 pY = _mm256_load_ps(&m_yCoor[j]);
-//			__m256 mj = _mm256_load_ps(&m_bodyMass[j]);
-//
-//			//find direction
-//			pY = _mm256_sub_ps(pY, cyi);
-//			pX = _mm256_sub_ps(pX, cxi);
-//
-//			//  distance squared 
-//			__m256 r2X = _mm256_set1_ps(0.0f);
-//			__m256 r2Y = _mm256_set1_ps(0.0f);
-//			r2X = _mm256_mul_ps(pX, pX);
-//			r2Y = _mm256_mul_ps(pY, pY);
-//			__m256 r2 = _mm256_set1_ps(0.0f);
-//			r2 = _mm256_add_ps(r2X, r2Y);
-//
-//			//compute 1 / sqrt(r2) * m/1
-//			__m256 invR = _mm256_set1_ps(0.0f);
-//			invR = _mm256_rsqrt_ps(r2);
-//			invR = _mm256_mul_ps(invR, invR);
-//			invR = _mm256_mul_ps(invR, invR);
-//			invR = _mm256_mul_ps(invR, mj);
-//
-//			pX = _mm256_mul_ps(pX, invR);
-//			pY = _mm256_mul_ps(pY, invR);
-//
-//			//remove any of the arithmetic that include the 
-//			pX = _mm256_maskload_ps((float*)&pX, mask_01);
-//			pY = _mm256_maskload_ps((float*)&pY, mask_01);
-//
-//			// sum force
-//			xi = _mm256_add_ps(pX, xi);
-//			yi = _mm256_add_ps(pY, yi);
-//		}
-//
-//		mask[i] = 0xFFFFFFFF;
-//
-//		xi = _mm256_hadd_ps(xi, _mm256_permute2f128_ps(xi, xi, 1));
-//		yi = _mm256_hadd_ps(yi, _mm256_permute2f128_ps(yi, yi, 1));
-//
-//		m_forceX[i] = ((float*)&xi)[0];
-//		m_forceY[i] = ((float*)&yi)[0];
-//	}
-//}
-//
-//void NBody::Application::OpenMPApplication::ExecuteApplication()
-//{
-//	for (int iterationIndex = 0; iterationIndex < 1000; ++iterationIndex)
-//	{
-//		Core::System::IO::WriteProgressMessage(iterationIndex);
-//		ComputeForces();
-//		MergeResults();
-//		//dump results to file
-//		Core::System::IO::WriteBodiesToFile(iterationIndex, m_allBodies, m_bodyCount);
-//	}
-//}
-//
-//void NBody::Application::OpenMPApplication::Execute()
-//{
-//	double startingTime = 0, endingTime = 0;
-//	startingTime = omp_get_wtime();
-//	ExecuteApplication();
-//	endingTime = omp_get_wtime();
-//
-//	double timeTaken = endingTime - startingTime;
-//	std::cout << "Total time taken is " << timeTaken << std::endl;
-//}
+
+void NBody::Application::OpenMPApplication::Execute()
+{
+	double startingTime = 0, endingTime = 0;
+	startingTime = omp_get_wtime();
+	ExecuteApplication();
+	endingTime = omp_get_wtime();
+
+	double timeTaken = endingTime - startingTime;
+	std::cout << "Total time taken is " << timeTaken << std::endl;
+}
 
 ///-------------------------------------------------------------------------------------------------
 /// <summary>	Constructor. </summary>
