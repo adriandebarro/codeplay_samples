@@ -18,7 +18,7 @@ Code sample 1 contains 4 different solutions to solve the nbody problem:
   - Makes use of the SSE3 instruction set for improved performance
 
 ## Sample 2
------ continue here
+<!-- ----- continue here
 
 Code sample 2 contains the work of my Master's thesis, which involves the field of high-fidelity rendering, distributed systems, parallelism and distributed systems.
 
@@ -41,7 +41,7 @@ To compile all the sources an environmental variable `BOOST_DIR` must be setup, 
 
 ## Feedback
 Any feedback on how to improve the code further would be greatly appreciated.
-
+-->
 <!-- ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/adriandebarro/codeplay_samples/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
