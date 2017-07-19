@@ -23,7 +23,7 @@ Code sample 2 contains the work of my Master's thesis, which involves the field 
 
 
 
-![alt text]( ./GithubPagesAssits/system_overview.png)
+![alt text](GithubPagesAssits/system_overview.png)
 
 
 
