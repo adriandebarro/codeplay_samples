@@ -18,12 +18,13 @@ Code sample 1 contains 4 different solutions to solve the nbody problem:
   - Makes use of the SSE3 instruction set for improved performance
 
 ## Sample 2
+----- continue here
 
 Code sample 2 contains the work of my Master's thesis, which involves the field of high-fidelity rendering, distributed systems, parallelism and distributed systems.
 
 
 
-![alt text](GithubPagesAssits/system_overview.PNG)
+![alt text](GithubPagesAssets/system_overview.PNG)
 
 
 
@@ -33,7 +34,7 @@ The code can be split into two; the rendering component and the communication co
 
 
 
-### A copy of my dissertation can be acquired from [here](./GithubPagesAssits/main.pdf)
+### A copy of my dissertation can be acquired from [here](./GithubPagesAssets/main.pdf)
 
 ## Compiling the Sources
 To compile all the sources an environmental variable `BOOST_DIR` must be setup, specifying a directory containing a Boost Library
