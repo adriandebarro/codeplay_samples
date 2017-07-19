@@ -21,11 +21,15 @@ Code sample 1 contains 4 different solutions to solve the nbody problem:
 
 Code sample 2 contains the work of my Master's thesis, which involves the field of high-fidelity rendering, distributed systems, parallelism and distributed systems.
 
-[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
+
+
+![alt text]( ./GithubPagesAssits/system_overview.png)
+
+
 
 The code can be split into two; the rendering component and the communication component, as specified in the
 
-### A copy of my dissertation can be acquired from [here](./main.pdf)
+### A copy of my dissertation can be acquired from [here](./GithubPagesAssits/main.pdf)
 
 ## Compiling the Sources
 To compile all the sources an environmental variable must be setup, specifying a directory containing the Boost Library
