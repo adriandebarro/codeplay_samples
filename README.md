@@ -2,9 +2,9 @@
 
 The code samples are composed from:
 
-## CodeSamples 1
+## Sample 1
 
-CodeSamples 1 contains solutions for the N-Body problem in 4 different flavours:
+Code sample 1 contains 4 different solutions to solve the nbody problem:
 
 1. Cuda straight forward implementation
   -  Spawning of a cuda thread for every body in the system
@@ -17,8 +17,21 @@ CodeSamples 1 contains solutions for the N-Body problem in 4 different flavours:
 4. OpenMP implementation
   - Makes use of the SSE3 instruction set for improved performance
 
-## CodeSample 2
+## Sample 2
 
+Code sample 2 contains the work of my Master's thesis, which involves the field of high-fidelity rendering, distributed systems, parallelism and distributed systems.
+
+[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
+
+The code can be split into two; the rendering component and the communication component, as specified in the
+
+### A copy of my dissertation can be acquired from [here](./main.pdf)
+
+## Compiling the Sources
+To compile all the sources an environmental variable must be setup, specifying a directory containing the Boost Library
+
+## Feedback
+Any feedback on how to improve the code further would be greatly appreciated.
 
 <!-- ## Welcome to GitHub Pages
 
