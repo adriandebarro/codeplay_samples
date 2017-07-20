@@ -18,9 +18,16 @@ Code sample 1 contains 4 different solutions to solve the nbody problem:
   - Makes use of the SSE3 instruction set for improved performance
 
 ## Sample 2
-Code sample 2 contains the work of my Master's thesis, which involves the fields of high-fidelity rendering, distributed systems and high performance computing. The dissertation builds upon the research of Bugeja et al. in the following paper().
+Code sample 2 contains the work of my Master's thesis, which involves the fields of high-fidelity rendering, distributed systems and high performance computing. The dissertation builds upon the research of Bugeja et al.
 
-The original authors came out with the idea of collaborative HFR, where peers collaborating in the same scene; such as, peers in an online multiplayer game ----
+### Background
+
+The original authors proposed a novel technique for collaborative HFR, applicable for scenarios where peers are collaborating together in the same environment; such as, peers interacting in an online multiplayer environment.
+
+ Through the application of a peer-to-peer topology, peers calculate irradiance samples, which in turn are grouped, given a unique identifier and shared with other peers. If a peer receives the indirect light information for a particular area in the scene, it would allow the respective peer to gain a speedup through amortisation, --- .
+
+At any point in time all peers would pick a random peer from their local cache of peer details (The cache only contains a subset of all the peers collaborating over the network), once two peers communicate they will reconcile their indirect lighting differences.
+
 
 
 
@@ -28,12 +35,17 @@ The original authors came out with the idea of collaborative HFR, where peers co
 
 ![alt text](GithubPagesAssets/peer_overview.PNG)
 
-The System is composed from two major components(as shown in the figure above); the rendering component, which delivers physically correct illumination through the Irradiance Cache. The irradiance cache is a physically correct technique able to improve the time taken to compute diffuse inter-reflections, through the re-use of previously computed irradiance samples. On the other hand, the system makes use of a peer-to-peer architecture for the sharing of computed irradiance samples and data is disseminated through a network through the use of the Anti-Entropy technique, a technique which mimics how viruses spread in biological populations.
+The System is composed from two major components(as shown in the figure above); the rendering component, which delivers physically correct illumination through the Irradiance Cache.
 
-The state of the art in collaborative HFR happened to have questions related to the scalability of the technique. Moreover, peers do not discriminate tp whom data is passed (Since the Anti-Entropy) always picks a random peer from the sub-set of local peers.
+ The irradiance cache is a physically correct technique able to improve the time taken to compute indirect diffuse inter-reflections, through the re-use of previously computed irradiance samples. On the other hand, the system makes use of a peer-to-peer architecture for the sharing of computed irradiance samples and data is disseminated through the network through the use of the Anti-Entropy technique, a technique which mimics how viruses spread in biological populations.
+
+The state of the art in collaborative HFR happened to have questions related to the scalability of the technique. Moreover, peers do not discriminate tp whom data is passed (Since the Anti-Entropy====) always picks a random peer from the sub-set of local peers.
 
 
 ![alt text](GithubPagesAssets/system_overview.PNG)
+=====explain test setup and utility tools
+
+
 
 ### Contribution 1
 
