@@ -18,17 +18,31 @@ Code sample 1 contains 4 different solutions to solve the nbody problem:
   - Makes use of the SSE3 instruction set for improved performance
 
 ## Sample 2
-<!-- ----- continue here
+Code sample 2 contains the work of my Master's thesis, which involves the fields of high-fidelity rendering, distributed systems and high performance computing. The dissertation builds upon the research of Bugeja et al. in the following paper().
 
-Code sample 2 contains the work of my Master's thesis, which involves the field of high-fidelity rendering, distributed systems, parallelism and distributed systems.
+The original authors came out with the idea of collaborative HFR, where peers collaborating in the same scene; such as, peers in an online multiplayer game ----
 
+
+
+### System Architecture
+
+![alt text](GithubPagesAssets/peer_overview.PNG)
+
+The System is composed from two major components(as shown in the figure above); the rendering component, which delivers physically correct illumination through the Irradiance Cache. The irradiance cache is a physically correct technique able to improve the time taken to compute diffuse inter-reflections, through the re-use of previously computed irradiance samples. On the other hand, the system makes use of a peer-to-peer architecture for the sharing of computed irradiance samples and data is disseminated through a network through the use of the Anti-Entropy technique, a technique which mimics how viruses spread in biological populations.
+
+The state of the art in collaborative HFR happened to have questions related to the scalability of the technique. Moreover, peers do not discriminate tp whom data is passed (Since the Anti-Entropy) always picks a random peer from the sub-set of local peers.
 
 
 ![alt text](GithubPagesAssets/system_overview.PNG)
 
+### Contribution 1
 
+### Contribution 2
 
-The code can be split into two; the rendering component and the communication component, as specified in the
+### Contribution 3
+
+![alt text](GithubPagesAssets/town.png)
+
 
 ### Improving Sample 2
 
@@ -41,7 +55,7 @@ To compile all the sources an environmental variable `BOOST_DIR` must be setup, 
 
 ## Feedback
 Any feedback on how to improve the code further would be greatly appreciated.
--->
+
 <!-- ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/adriandebarro/codeplay_samples/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
