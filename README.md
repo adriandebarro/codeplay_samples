@@ -24,26 +24,34 @@ Code sample 2 contains the work of my Master's thesis, which involves the fields
 
 The original authors proposed a novel technique for collaborative HFR, applicable for scenarios where peers are collaborating together in the same environment; such as, peers interacting in an online multiplayer environment.
 
- Through the application of a peer-to-peer topology, peers calculate irradiance samples, which in turn are grouped, given a unique identifier and shared with other peers. If a peer receives the indirect light information for a particular area in the scene, it would allow the respective peer to gain a speedup through amortisation, --- .
+ Through the application of a peer-to-peer topology, peers calculate irradiance samples, which in turn are grouped, given a unique identifier and shared with other peers. If a peer receives the indirect light information for a particular area in the scene, it would allow the respective peer to gain a speedup through amortisation, since the peer would not have to calculate the indirect lighting samples but just aquire them and use them. which is much faster and thus achieving aspeed-up.
 
-At any point in time all peers would pick a random peer from their local cache of peer details (The cache only contains a subset of all the peers collaborating over the network), once two peers communicate they will reconcile their indirect lighting differences.
+At any point in time peers would pick a random peer from their local cache of peer details (The cache only contains a subset of all the peers collaborating over the network), once two peers communicate they will reconcile their indirect lighting caches.
 
-
-
+The state of the art in collaborative HFR happened to have questions related to scalability of the collaboration. Moreover, peers do not discriminate to whom data is passed (Since the Anti-Entropy is a random walk based technique) and at each turn a peer would always pick a random peer from the sub-set of local peer details.
 
 ### System Architecture
 
 ![alt text](GithubPagesAssets/peer_overview.PNG)
 
-The System is composed from two major components(as shown in the figure above); the rendering component, which delivers physically correct illumination through the Irradiance Cache.
+The System is composed from two major components(as shown in the figure above); the rendering component, which delivers physically correct illumination through the Irradiance Cache and the communication layer, which takes care of sending and receiving new data to other peers collaorating on the peer-to-peer network.
 
- The irradiance cache is a physically correct technique able to improve the time taken to compute indirect diffuse inter-reflections, through the re-use of previously computed irradiance samples. On the other hand, the system makes use of a peer-to-peer architecture for the sharing of computed irradiance samples and data is disseminated through the network through the use of the Anti-Entropy technique, a technique which mimics how viruses spread in biological populations.
+ The irradiance cache is a physically correct rendering technique able to improve the time taken to compute indirect diffuse inter-reflections, through the re-use of previously computed irradiance samples. Samples are computed on demand, if a sample is computed it means that no other samples could be used to interpolate an approximate result for that position in the scene.
 
-The state of the art in collaborative HFR happened to have questions related to the scalability of the technique. Moreover, peers do not discriminate tp whom data is passed (Since the Anti-Entropy====) always picks a random peer from the sub-set of local peers.
+      - A frame is split into a number of equal tiles, such that different threads can handle different parts of the screen to be rendered
+      - All threads can access the shared irradiance cache safely as the irradiance cache makes use of wait-free mechanisims to ensure safety (use of `compare and swap`  and `fetch and add` atomic operations).
+      - Each new indirect lighting information created by any of the rendering threads are pushed onto a queue, which is monitored by the 'OEM'.
+      - The OEM takes care of grabbing the samples, grouping them in groups of 100 and creates new 'observable events' that are passed onto the 'observable events list'
 
+ On the other hand, the system makes use of a peer-to-peer architecture for the sharing of computed irradiance samples and data is disseminated through the network through the use of the Anti-Entropy technique, a technique which mimics how viruses spread in biological populations.
 
-![alt text](GithubPagesAssets/system_overview.PNG)
-=====explain test setup and utility tools
+    - Each peer contains two communication threads, one that takes care of initiating new communications with new random peers and the other takes care of receiving communications from other peers.
+
+    -Upon reconciliation, the threads would share locally stored  
+
+### Overall Setup
+![alt text](./GithubPagesAssets/system_overview.PNG)
+
 
 
 
@@ -53,14 +61,12 @@ The state of the art in collaborative HFR happened to have questions related to 
 
 ### Contribution 3
 
-![alt text](GithubPagesAssets/town.png)
+![alt text](./GithubPagesAssets/town.png)
 
 
 ### Improving Sample 2
 
-
-
-### A copy of my dissertation can be acquired from [here](./GithubPagesAssets/main.pdf)
+A copy of my dissertation can be acquired from [here](./GithubPagesAssets/main.pdf)
 
 ## Compiling the Sources
 To compile all the sources an environmental variable `BOOST_DIR` must be setup, specifying a directory containing a Boost Library
