@@ -18,7 +18,7 @@ Code sample 1 contains 4 different solutions to solve the nbody problem:
   - Makes use of the SSE3 instruction set for improved performance
 
 ## Sample 2
-Code sample 2 contains the work of my Master's thesis, which involves the fields of high-fidelity rendering, distributed systems and high performance computing. The dissertation builds upon the research of Bugeja et al.
+Code sample 2 contains the work of my Master's thesis, which involves the fields of high-fidelity rendering, distributed systems and high performance computing. The dissertation builds upon the research of [Bugeja et al.](https://diglib.eg.org/handle/10.2312/pgv.20141079.009-016)
 
 ### Background
 
@@ -75,7 +75,7 @@ Renders created by 2PIC were compared to the same shots rendered with the irradi
 On the other hand, network performance was examined by running the same experiments that were run in Chapter 4 and compared with them. 2PIC was able to overcome over-saturation, while gaining a two-fold improvement across both 8 and 16 peers, only through sharing of computations cared out by the individual peers.
 
 ### Contribution 3
-roposal of a novel technique for an improved data dissemination between peers, which is called the context aware peer-to-peer (`CAP2P`). The proposed technique makes use of different scene and hardware variables, which are referred to as Contexts.
+Proposal of a novel technique for an improved data dissemination between peers, which is called the context aware peer-to-peer (`CAP2P`). The proposed technique makes use of different scene and hardware variables, which are referred to as Contexts.
 
 Contexts provide the means for peers to prioritise message passing towards other peers, such that, peers exchange more useful data. Through the application of a distributed publisher-subscriber design pattern, context were applied to the peer-to-peer system.
 The Data received from the context server about other peers, allows a said peer to weight peers according to a specific context, and build a respective probability distribution function (PDF), whichallows peers to communicate with each other at different frequencies. Since, peers with a higher probability will be communicated more frequently.
